@@ -5,6 +5,7 @@ services:
     build:
       context: node
     container_name: node_app
+    entrypoint: dockerize -wait tcp://db:3306
     networks:
       - node-network
     volumes:
